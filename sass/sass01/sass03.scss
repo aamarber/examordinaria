@@ -1,0 +1,28 @@
+@function isLeapYear($year){
+    @if($year % 400 == 0){
+        @return true;
+    }
+
+    @if($year % 100 != 0 and $year % 4 == 0){
+        @return true;
+    }
+
+    @return false;
+}
+
+@mixin calendar($year){
+    @if(isLeapYear($year)){
+        color: red;
+    }
+    @else {
+        color: blue;
+    }
+}
+
+.calendar-leap{
+    @include calendar(2024);
+}
+
+.calendar-not-leap{
+    @include calendar(2023);
+}

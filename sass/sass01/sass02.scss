@@ -1,0 +1,10 @@
+$fontColor: #3F6634;
+
+@mixin textStyles($fontColor){
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 14em;
+    text-decoration: none;
+    color: $fontColor;
+}
+
+p, a, span { @include textStyles($fontColor) }

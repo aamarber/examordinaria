@@ -1,0 +1,13 @@
+@use "sass:math";
+
+@mixin nth($quantity){
+    @for $counter from 1 through $quantity{
+        .row-#{$counter}{
+            width: math.div($counter, 2);
+        }
+    }
+}
+
+div.table {
+    @include nth(5);
+}

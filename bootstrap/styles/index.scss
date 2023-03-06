@@ -1,0 +1,20 @@
+@use '_colors.scss';
+
+body{
+    background-color: colors.$mainColor;
+    font-family: Verdana, 'Times New Roman', sans-serif;
+
+    height: 100vh;
+    width: 100wh;
+
+    .modal-content{
+        background-color: colors.$secondaryColor;
+        color: colors.$secondaryContrastColor;
+
+        .modal-body{
+            div[class*="col-"]{
+                margin-top: 2em;
+            }
+        }
+    }
+}
